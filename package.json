@@ -1,0 +1,19 @@
+{
+  "name": "live-puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.html",
+    "heroku-postbuild": "cd client && npm i && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "puppeteer": "^10.2.0"
+  }
+}
