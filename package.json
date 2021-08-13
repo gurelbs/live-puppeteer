@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "node server.js",
     "deploy": "git add .&& git commit -m \"updated\" && git push origin main && git push heroku main",
     "heroku-postbuild": "NODE_ENV=production cd client && npm install && npm run build"
   },
