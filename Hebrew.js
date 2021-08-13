@@ -3,6 +3,7 @@ const getTranslate = require('./controllers/getTranslate');
 const getMeaning = require('./controllers/getMeaning');
 const getDirection = require('./controllers/getDirection');
 const getNews = require('./controllers/getNews');
+ 
 
 class Hebrew {
   async weather(city) {
@@ -62,4 +63,4 @@ class Hebrew {
 
 }
 
-module.exports.Hebrew = Hebrew;
+module.exports = Hebrew;
