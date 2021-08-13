@@ -13,14 +13,17 @@ const PORT = process.env.PORT || 5000
 // const answers = new Hebrew()
 // answers.news('קורונה')
  
-express()
-	.use(cors())
-	.use(express.json())
-	.use(express.static(path.join(__dirname, '/build')))
-	.get('*', function (req, res) {
-		const index = path.join(__dirname, 'build', 'index.html');
-		res.sendFile(index);
+const app = express()
+app.use(cors())
+app.use(express.json())
+
+if (process.env.NODE_ENV) {
+	app.use(express.static(path.resolve(process.cwd(), 'client/build')))
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(process.cwd(), 'client/build/index.html'))
 	})
+}
+
 	// .post('/translate', async (req, res) => {
 	// 	try {
 	// 		let answer = await answers.news('קורונה')
@@ -29,4 +32,4 @@ express()
 	// 		console.log(error)
 	// 	}
 	// })
-	.listen(PORT, () => console.log(`server run at http://localhost:${PORT}`))
+	app.listen(PORT, () => console.log(`server run at http://localhost:${PORT}`))
