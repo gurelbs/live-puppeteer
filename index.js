@@ -6,7 +6,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 // const answers = new Hebrew()
 // answers.news('קורונה')
-
+ 
 express()
 	.use(cors())
 	.use(express.json())
