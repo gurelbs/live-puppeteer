@@ -1,5 +1,5 @@
 const express = require('express')
-const answers = require('./hebrew')
+// const answers = require('./hebrew')
 const cors = require('cors')
 const path = require('path')
 

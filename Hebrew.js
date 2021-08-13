@@ -16,7 +16,6 @@ function answers() {
       return error;
     }
   }
-
   async function translate(word) {
     try {
       let answer = await getTranslate(word);
@@ -27,7 +26,6 @@ function answers() {
       return error;
     }
   }
-
   async function meaning(meaning) {
     try {
       let answer = await getMeaning(meaning);
@@ -38,7 +36,6 @@ function answers() {
       return error;
     }
   }
-
   async function direction(from, to) {
     try {
       let answer = await getDirection(from, to);
@@ -49,7 +46,6 @@ function answers() {
       return error;
     }
   }
-
   async function news(term) {
     try {
       let answer = await getNews(term);
