@@ -3,6 +3,12 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 
+// const getWeather = require('./controllers/getWeather');
+// const getTranslate = require('./controllers/getTranslate');
+// const getMeaning = require('./controllers/getMeaning');
+// const getDirection = require('./controllers/getDirection');
+// const getNews = require('./controllers/getNews');
+
 const PORT = process.env.PORT || 5000
 // const answers = new Hebrew()
 // answers.news('קורונה')
@@ -10,8 +16,8 @@ const PORT = process.env.PORT || 5000
 express()
 	.use(cors())
 	.use(express.json())
-	.use(express.static(path.join(__dirname, '/client/build')))
-	.get('*', (req, res) => res.sendFile(path.join(__dirname,'/client/build/index.html')))
+	.use(express.static(path.join(__dirname, '/build')))
+	.get('*', (req, res) => res.sendFile(path.join(__dirname,'/build/index.html')))
 	// .post('/translate', async (req, res) => {
 	// 	try {
 	// 		let answer = await answers.news('קורונה')
