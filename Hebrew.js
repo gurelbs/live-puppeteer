@@ -5,8 +5,8 @@ const getDirection = require('./controllers/getDirection');
 const getNews = require('./controllers/getNews');
  
 
-class Hebrew {
-  async weather(city) {
+function answers() {
+  async function weather(city) {
     try {
       let answer = await getWeather(city);
       console.log(answer);
@@ -17,7 +17,7 @@ class Hebrew {
     }
   }
 
-  async translate(word) {
+  async function translate(word) {
     try {
       let answer = await getTranslate(word);
       console.log(answer);
@@ -28,7 +28,7 @@ class Hebrew {
     }
   }
 
-  async meaning(meaning) {
+  async function meaning(meaning) {
     try {
       let answer = await getMeaning(meaning);
       console.log(answer);
@@ -39,7 +39,7 @@ class Hebrew {
     }
   }
 
-  async direction(from, to) {
+  async function direction(from, to) {
     try {
       let answer = await getDirection(from, to);
       console.log(answer);
@@ -50,7 +50,7 @@ class Hebrew {
     }
   }
 
-  async news(term) {
+  async function news(term) {
     try {
       let answer = await getNews(term);
       console.log(answer);
@@ -60,7 +60,13 @@ class Hebrew {
       return error;
     }
   }
-
+  return {
+    weather,
+    translate,
+    meaning,
+    news,
+    direction
+  }
 }
 
-module.exports = Hebrew;
+module.exports = answers;
