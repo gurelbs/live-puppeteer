@@ -19,7 +19,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, './../client/build')));
 console.log(path.resolve(__dirname, './../client/build'));
 app.get('/', function(req, res) {
-	res.sendFile('client/build/index.html')
+	res.sendFile('index.html', { root: path.join(__dirname, '../client/build') });
 });
 	// .post('/translate', async (req, res) => {
 	// 	try {
