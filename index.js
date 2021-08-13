@@ -17,7 +17,10 @@ express()
 	.use(cors())
 	.use(express.json())
 	.use(express.static(path.join(__dirname, '/build')))
-	.get('*', (req, res) => res.sendFile(path.join(__dirname,'/build/index.html')))
+	.get('*', function (req, res) {
+		const index = path.join(__dirname, 'build', 'index.html');
+		res.sendFile(index);
+	})
 	// .post('/translate', async (req, res) => {
 	// 	try {
 	// 		let answer = await answers.news('קורונה')
