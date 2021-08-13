@@ -1,8 +1,8 @@
-const getWeather = require('./controllers/getWeather');
-const getTranslate = require('./controllers/getTranslate');
-const getMeaning = require('./controllers/getMeaning');
-const getDirection = require('./controllers/getDirection');
-const getNews = require('./controllers/getNews');
+const getWeather = require('../controllers/getWeather');
+const getTranslate = require('../controllers/getTranslate');
+const getMeaning = require('../controllers/getMeaning');
+const getDirection = require('../controllers/getDirection');
+const getNews = require('../controllers/getNews');
  
 
 function answers() {
