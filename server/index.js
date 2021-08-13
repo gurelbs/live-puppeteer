@@ -2,7 +2,7 @@ const express = require('express')
 // const answers = require('./hebrew')
 const cors = require('cors')
 const path = require('path')
-
+const isDev = process.env.NODE_ENV !== 'production';
 // const getWeather = require('./controllers/getWeather');
 // const getTranslate = require('./controllers/getTranslate');
 // const getMeaning = require('./controllers/getMeaning');
