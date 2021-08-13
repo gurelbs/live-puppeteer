@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.html",
+    "start": "node index.js",
     "deploy": "git add .&& git commit -m \"updated\" && git push origin main && git push heroku main",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
