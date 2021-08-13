@@ -18,9 +18,9 @@ app.use(cors())
 app.use(express.json())
 
 if (process.env.NODE_ENV) {
-	app.use(express.static(__dirname+'/client/build'))
+	app.use(express.static('build'))
 	app.get('*', (req, res) => {
-		res.sendFile(__dirname+'/client/build/index.html')
+		res.sendFile('build/index.html')
 	})
 }
 
