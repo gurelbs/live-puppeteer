@@ -16,7 +16,6 @@ const PORT = process.env.PORT || 5000
 const app = express()
 app.use(cors())
 app.use(express.json())
-console.log(process.cwd());
 if (process.env.NODE_ENV) {
 	app.use(express.static(path.resolve(process.cwd(), 'client/build')))
 	app.get('*', (req, res) => {
